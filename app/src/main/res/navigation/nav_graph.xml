@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/fragment_Main">
+    <fragment android:id="@+id/fragment_Main" android:name="com.example.animalcare.fragments.Fragment_Main"
+              android:label="fragment_fragment__main" tools:layout="@layout/fragment_main">
+        <action app:destination="@id/fragment_laws" android:id="@+id/action_fragment_main_to_fragment_laws"/>
+
+        <action android:id="@+id/action_fragment_Main_to_fragmento_Organizacion"
+                app:destination="@id/fragmento_Organizacion"/>
+        <action android:id="@+id/action_fragment_Main_to_curiosidades" app:destination="@id/curiosidades"/>
+        <action android:id="@+id/action_fragment_Main_to_enfermedades" app:destination="@id/enfermedades"/>
+        <action android:id="@+id/action_fragment_Main_to_fragment_Vet" app:destination="@id/fragment_Vet"/>
+        <action android:id="@+id/action_fragment_Main_to_fragment_Animal" app:destination="@id/fragment_Animal"/>
+    </fragment>
+    <fragment android:id="@+id/fragment_laws" android:name="com.example.animalcare.fragments.fragment_leyes"
+              android:label="fragment_laws" tools:layout="@layout/fragment_laws"/>
+    <fragment android:id="@+id/fragmento_Organizacion" android:name="com.example.animalcare.fragments.Fragmento_Organizacion"
+              android:label="fragment_fragmento__organizacion" tools:layout="@layout/fragment_fragmento__organizacion"/>
+    <fragment android:id="@+id/curiosidades" android:name="com.example.animalcare.fragments.Curiosidades"
+              android:label="fragment_curiosidades" tools:layout="@layout/fragment_curiosidades"/>
+    <fragment android:id="@+id/enfermedades" android:name="com.example.animalcare.fragments.Enfermedades"
+              android:label="fragment_enfermedades" tools:layout="@layout/fragment_enfermedades"/>
+    <fragment android:id="@+id/fragment_Vet" android:name="com.example.animalcare.fragments.Fragment_Vet"
+              android:label="fragment_vet" tools:layout="@layout/fragment_vet">
+        <action android:id="@+id/action_fragment_Vet_to_vet_info_fragment" app:destination="@+id/vet_info_fragment"/>
+    </fragment>
+    <fragment android:id="@+id/fragment_Animal" android:name="com.example.animalcare.fragments.Fragment_Animal"
+              android:label="fragment_animal" tools:layout="@layout/fragment_animal"/>
+    <fragment android:id="@+id/vet_info_fragment" android:name="com.example.animalcare.fragments.vet_info_fragment"
+              android:label="fragment_vet_info" tools:layout="@layout/fragment_vet_info"/>
+</navigation>
